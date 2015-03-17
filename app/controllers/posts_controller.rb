@@ -4,7 +4,13 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.paginate(:page => params[:page], :per_page => 10)
+    tag_cloud
+    if params[:tag]
+      # 获取带有对应tag的文章,并按倒叙排列
+      @posts = Post.tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 10)
+    else
+      @posts = Post.paginate(:page => params[:page], :per_page => 10)
+    end
   end
 
   # GET /posts/1
@@ -61,6 +67,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def tag_cloud
+    @tags = Post.tag_counts_on(:tags)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
@@ -69,6 +79,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :text, :user_id)
+      params.require(:post).permit(:title, :text, :user_id, :tag_list)
     end
 end

@@ -32,6 +32,8 @@ gem 'redcarpet'
 gem 'pygments.rb'
 # paginate
 gem 'will_paginate'
+# tags
+gem 'acts-as-taggable-on'
 
 
 # Use ActiveModel has_secure_password

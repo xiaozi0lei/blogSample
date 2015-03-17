@@ -23,6 +23,13 @@
     <%= f.label :user_id %><br>
     <%= f.number_field :user_id %>
   </div>
+
+  <div>
+  <!-- 添加tags -->
+  <%= f.label :tag_list, "Tags (separated by commas)" %>
+  <%= f.text_field :tag_list %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
