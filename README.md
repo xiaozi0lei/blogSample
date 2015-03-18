@@ -2,6 +2,8 @@
 
 Blog最终展示请参照 [虎妞网](http://www.tigerbull.info)
 
+***
+
 History:
 
 20150317
@@ -35,3 +37,5 @@ History:
 20141014
   * 环境搭建，一个简单的hello Rails
 
+
+本项目遵从 [GNU GENERAL PUBLIC LICENSE](https://github.com/xiaozi0lei/dockerChineseDoc/blob/master/LICENSE)
