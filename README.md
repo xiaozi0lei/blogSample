@@ -1,6 +1,6 @@
 这是一个积木项目，在rails框架的基础上搭建你自己的blog，随你所想！
 
-Blog最终展示请参照 [虎妞网](http://www.tigerbull.info)
+Blog最终展示请参照 [虎妞网](http://www.tigerbull.cn)
 
 ***
 
